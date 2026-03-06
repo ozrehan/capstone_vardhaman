@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vardhaman College of Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="background-container">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="login-form">
+                <h1>Vardhaman College of Engineering</h1>
+                <p>Shamshabad, Hyderabad - 501218</p>
+                <div class="form-container">
+                    <h2>Student Login</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Username" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="login-btn">Login</button>
+                        <div class="form-links">
+                            <a href="#">Forgot Password?</a>
+                            <a href="#">New User? Register</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-bubble" id="chatbotBubble">
+            <img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png" alt="Chatbot" class="chatbot-logo">
+        </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png" alt="Chatbot" class="chatbot-header-logo">
+                    <span>VCE Assistant</span>
+                </div>
+                <button class="close-btn" id="closeChatbot">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chatbot-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <p>Hello! I'm your VCE Assistant. How can I help you today?</p>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="userInput" placeholder="Type your message...">
+                <button id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

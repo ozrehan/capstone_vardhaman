@@ -22,6 +22,7 @@ const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/
 // Function to send message to Gemini API via local server
 async function sendToGemini(message) {
     try {
+        console.log('Sending message:', message);
         const response = await fetch('http://localhost:5000/api/chat', {
             method: 'POST',
             headers: {
@@ -32,11 +33,14 @@ async function sendToGemini(message) {
             })
         });
 
+        console.log('Response status:', response.status);
+        
         if (!response.ok) {
             throw new Error(`Server Error: ${response.status}`);
         }
 
         const data = await response.json();
+        console.log('Response data:', data);
         
         if (data.success && data.response) {
             return data.response;

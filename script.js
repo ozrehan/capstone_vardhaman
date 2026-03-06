@@ -19,11 +19,11 @@ closeChatbot.addEventListener('click', () => {
 const GEMINI_API_KEY = 'AIzaSyDHYPg84NaVENwxyQD-g2buStPs-Rvbo3Y'; // Replace with your actual API key
 const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
 
-// Function to send message to Gemini API via local server
+// Function to send message to Gemini API via Vercel serverless function
 async function sendToGemini(message) {
     try {
         console.log('Sending message:', message);
-        const response = await fetch('http://localhost:5000/api/chat', {
+        const response = await fetch('/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
